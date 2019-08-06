@@ -1,0 +1,20 @@
+body {
+  margin: 0 auto;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vw 20px;
+  text-align: center;
+}
+
+.ant-table-body {
+  background-color: #fff;
+}
+
+.ant-table-pagination.ant-pagination {
+  float: none;
+  text-align: center;
+}
