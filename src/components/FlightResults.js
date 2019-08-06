@@ -4,12 +4,12 @@ import React from 'react';
 import { Table, Spin } from 'antd';
 import { TableColumns } from '../Constants';
 
-const FlightResults = ({ data: { Quotes }, isLoading }) => {
+const FlightResults = ({ quotes, isLoading }) => {
   return (
     <>
       {isLoading && <Spin size="large" />}
-      {Quotes && Quotes.length && !isLoading && (
-        <Table columns={TableColumns} dataSource={Quotes} />
+      {quotes && quotes.length && !isLoading && (
+        <Table columns={TableColumns} dataSource={quotes} />
       )}
     </>
   );

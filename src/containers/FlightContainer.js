@@ -11,7 +11,7 @@ const FlightContainer = () => {
   const [destination, setDestination] = useState('');
   const [url, setUrl] = useState('');
 
-  const [data, isLoading] = useFetch(url);
+  const [quotes, isLoading] = useFetch(url);
 
   return (
     <>
@@ -23,7 +23,7 @@ const FlightContainer = () => {
         setDestination={setDestination}
         setUrl={setUrl}
       />
-      <FlightResults data={data} isLoading={isLoading} />
+      <FlightResults quotes={quotes} isLoading={isLoading} />
     </>
   );
 };

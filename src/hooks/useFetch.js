@@ -6,7 +6,7 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 
 function useFetch(url) {
-  const [data, setData] = useState([]);
+  const [quotes, setQuotes] = useState([]);
   const [isLoading, setLoading] = useState(false);
   const [hasError, setHasError] = useState(false);
 
@@ -19,7 +19,7 @@ function useFetch(url) {
           'x-rapidapi-key': process.env.REACT_APP_X_RAPIDAPI_KEY
         }
       });
-      setData(response.data);
+      setQuotes(response.data.Quotes);
     } catch (error) {
       setHasError(true);
     }
@@ -28,7 +28,7 @@ function useFetch(url) {
   useEffect(() => {
     fetchUrl();
   }, [url]);
-  return [data, isLoading, hasError];
+  return [quotes, isLoading, hasError];
 }
 
 export { useFetch };
