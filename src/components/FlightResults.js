@@ -4,7 +4,7 @@ import React from 'react';
 import { Table, Spin } from 'antd';
 import { TableColumns } from '../Constants';
 
-const FlightResults = ({ data: { Quotes, isLoading } }) => {
+const FlightResults = ({ data: { Quotes }, isLoading }) => {
   return (
     <>
       {isLoading && <Spin size="large" />}
